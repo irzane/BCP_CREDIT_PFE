@@ -1,17 +1,12 @@
 package net.nak.entities;
 
-
 import lombok.*;
 import javax.persistence.*;
 
-@Entity
+@MappedSuperclass
 @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter @Builder
 public class Annexe {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     private String codebq;
 
@@ -20,6 +15,7 @@ public class Annexe {
     private String nbreligne;
 
     private String numero;
+
 
 
 }
